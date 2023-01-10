@@ -6,22 +6,36 @@
         <script src="//accaii.com/gakkologin/script.js" async></script><noscript><img src="//accaii.com/gakkologin/script?guid=on"></noscript>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" href="lib1.css">
+        <script src="lib1.js"></script>
     </head>
     <body>
         <div class="loginbox">
             <div class="mber">
                 <div class="aps">はるはるアカウント</div>
             </div>
-            <div class="alb">
-                <h3>はるはるアカウントでサインイン</h3>
-                <label>ユーザ名を入力してください
-                <br>
-                <input class="ttp" placeholder="@annonymous">
-                </label>
-                <br>
-
-                <button class="lb">次へ</button>
+             <div class="alb">
+                <h2>はるはるアカウントでサインイン</h2>
+                <div id="user">
+                    <label>ユーザ名を入力してください
+                    <br>
+                    <input class="ttp" placeholder="@annonymous">
+                    </label>
+                    <br>
+                    <button class="lb">次へ</button>
+                    <br>
+                    <a href="signup" class="donthaveaccounts">アカウントを持っていない方はこちら</a>
+                    <a href="signup" class="donthaveaccounts">プライバシーポリシ</a>
+               </div>
+               <div id="pass" style="display:none;">
+                    <label>パスワードを入力してください
+                    <br>
+                    <input class="ttp" placeholder="" type="password">
+                    </label>
+                    <br>
+                    <button class="lb">ログイン</button>
+               </div>
             </div>
+
         </div>
     </body>
 </html>
