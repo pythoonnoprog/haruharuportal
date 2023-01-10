@@ -12,3 +12,6 @@ function next(){
         document.getElementById("username_input").value=user;
     }
 }
+function logins(){
+    location.href="signin.html?user="+document.getElementById("username_input").value+"&pass="+document.getElementById("pass").value;
+}
