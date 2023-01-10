@@ -1,0 +1,17 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var up = new URLSearchParams(window.location.search);
+var user = up.get('user');
+var pass = up.get('pass');
+$.ajax({
+      type: "POST",
+      url: "https://script.google.com/macros/s/AKfycbzKO3RzIpPyGWdkPwJujDO-aF3AuH0q6NxRo_kqLVmRssRAgYNCvS28oWxtMlJ2NpNWLw/exec",
+      data: { p1: ida },
+       async : false
+    }).done(function (data) {
+        var dd = JSON.parse(data);
+        
+    }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
+        alert("読み込めませんでした", XMLHttpRequest, textStatus, errorThrown);
+});
+</script>
