@@ -12,6 +12,9 @@
     .loginbox{
         background-size: cover;  
     }
+    .ttp{
+        width:auto;
+    }
 }
 .donthaveaccounts{
     text-decoration: none;
