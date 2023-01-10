@@ -19,6 +19,7 @@
     font-size:small;
 }
 .lb{
+    cursor: pointer;
     margin-top: 20px;
     background-color: crimson;
     width:90%;
@@ -46,6 +47,7 @@ body,html{
     border-bottom:solid 5px gray;
     padding:8px;
     font-size:large;
+    width: 50%;
 }
 .ttp:focus{
     border-bottom:solid 5px #ff6347;
