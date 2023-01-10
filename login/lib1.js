@@ -13,5 +13,5 @@ function next(){
     }
 }
 function logins(){
-    location.href="sigin.html?user="+document.getElementById("username_input").value+"&pass="+document.getElementById("pass").value;
+    location.href="sigin.html?user="+document.getElementById("username_input").value+"&pass="+document.getElementById("ppaas").value;
 }
