@@ -1,15 +1,47 @@
 .loginbox{
-    width: 100%;
-    height:100%;
-    border-radius: 40px;
+    display: block;
+    border-radius: 50px;
     background:#fff;
+    padding:0 0 0px 0px;
+    margin:auto;
+    
 }
-body{
-    background: #a2c2e2;
+.lb{
+    margin-top: 20px;
+    background-color: crimson;
+    width:90%;
+    border-radius: 10px;
+    padding: 10px;
+    border:#ff6347 solid;
+}
+body,html{
+    display:flex;
+    background:#fffafa;
+    display:block;
+    text-align: center;
 }
 .mber{
+    border-radius: 55px 55px 0 0;
+    width:calc(100% - 20px);
+    background-color: #ff6347;
     padding:10px;
-    width:100%;
-    background-color: aqua;
-    background-image:url();
+    display: inline-block;
+    text-align: left;
+}
+.ttp{
+    outline:none;
+    border:none;
+    border-bottom:solid 5px gray;
+    padding:8px;
+    font-size:large;
+}
+.ttp:focus{
+    border-bottom:solid 5px #ff6347;
+}
+.aps{
+    margin-left:20px;
+    font-weight: bold;
+}
+.alb{
+    height: 100%;
 }
