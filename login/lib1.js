@@ -16,11 +16,11 @@ function logins(){
     location.href="sigin.html?user="+document.getElementById("username_input").value+"&pass="+document.getElementById("ppaas").value;
 }
 window.onload = function(){
-console.log("ver 1.3");
+console.log("ver 1.4");
 if(location.search.substr(1) == "liff"){
     console.log("現在LIFFモードです。 \n 変更する場合はURLの?liffを消去してごアクセスください");
     document.getElementById("mberid").style.display="none";
-    document.getElementById("loginboxid").style="border-radius:0px;width:100%;height:100%;";
+    document.getElementById("loginboxid").style="border-radius:0px;width:100%;height:100%;margin:none;";
 }else if(location.search.substr(1) == "pwa"){
     console.log("現在PWAモードです。 \n 変更する場合はURLの?pwaを消去してごアクセスください");
 }else{
