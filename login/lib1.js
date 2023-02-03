@@ -16,7 +16,7 @@ function logins(){
     location.href="sigin.html?user="+document.getElementById("username_input").value+"&pass="+document.getElementById("ppaas").value;
 }
 window.onload = function(){
-console.log("ver 1.4");
+console.log("ver 1.4.2");
 if(location.search.substr(1) == "liff"){
     console.log("現在LIFFモードです。 \n 変更する場合はURLの?liffを消去してごアクセスください");
     document.getElementById("mberid").style.display="none";
