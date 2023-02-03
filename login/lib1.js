@@ -15,6 +15,7 @@ function next(){
 function logins(){
     location.href="sigin.html?user="+document.getElementById("username_input").value+"&pass="+document.getElementById("ppaas").value;
 }
+window.onload = function(){
 console.log("ver 1");
 if(location.search.substr(1) == "liff"){
     console.log("現在LIFFモードです。 \n 変更する場合はURLの?liffを消去してごアクセスください");
@@ -24,4 +25,5 @@ if(location.search.substr(1) == "liff"){
     console.log("現在PWAモードです。 \n 変更する場合はURLの?pwaを消去してごアクセスください");
 }else{
     console.log("現在Webサイトモードです。 \n 変更する場合は次のドキュメントのような書式で利用できます \n %o https://pythoonnoprog.github.io/haruharuortal/login/dev.html");
+}
 }
