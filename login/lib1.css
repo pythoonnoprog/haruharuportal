@@ -5,7 +5,6 @@
     margin:auto;
     background-repeat: no-repeat;
     background-image: url(https://cdn.glitch.com/e3342b72-93eb-4a4c-bdae-a0166de9f522%2F1075252.png);
-    background-size: 100% auto;
     background-position:right 30% bottom 0;
 }
 @media screen and (max-width:800px){
@@ -31,9 +30,7 @@
     border:#ff6347 solid;
 }
 body,html{
-    display:flex;
-    background:#fffafa;
-    display:block;
+
     text-align: center;
 }
 .mber{
