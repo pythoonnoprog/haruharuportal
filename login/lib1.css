@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-image: url(https://cdn.glitch.com/e3342b72-93eb-4a4c-bdae-a0166de9f522%2F1075252.png);
     background-position:right 30% bottom 0;
+    background-size: cover;
 }
 @media screen and (max-width:800px){
     .loginbox{
