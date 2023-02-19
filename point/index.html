@@ -11,6 +11,8 @@
       <script src="https://cdn.jsdelivr.net/gh/mtaketani113/jquery-barcode@master/jquery-barcode.js"></script> 
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       <!--メタ情報　及び　外部スクリプト読み込み of 終わり-->
+      <link rel="icon" href="https://ul.h3z.jp/Z1BAiZ5k.png" />
+      <link rel="manifest" href="manifest.json">
     </head>
     <body>
     <topbar></topbar>
@@ -44,13 +46,67 @@
 
       </div>
       </div>
-
+<!-- Install PWA popup -->
+<div id="install-popup">
+  <p>このアプリをホーム画面に追加して、オフラインでも使用できるようにしましょう。</p>
+  <button id="install-btn">インストール</button>
+  <button id="dismiss-btn">あとで</button>
+</div>
       <script>
         var bid = "111111111111111111";
         var zandaka = "00";
         $("#barcode1").barcode(bid,"ean13");
         $("#zandaka").html("<div class='zbox'>利用可能<div id='rt'><span style='font-size:42px;'>"+Number(zandaka).toLocaleString()+"</span>ポイント</div></div>");
       </script>
+      <script>
+  // Service Worker registration
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registered with scope: ', registration.scope);
+        }, function(err) {
+          console.log('Service Worker registration failed: ', err);
+        });
+    });
+  }
+
+  // Install PWA popup
+  let deferredPrompt;
+  const installPopup = document.getElementById('install-popup');
+  const installBtn = document.getElementById('install-btn');
+  const dismissBtn = document.getElementById('dismiss-btn');
+
+  window.addEventListener('beforeinstallprompt', function(event) {
+    // Prevent the mini-infobar from appearing on mobile devices
+    event.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = event;
+    // Show the install popup
+    installPopup.style.display = 'block';
+  });
+
+  installBtn.addEventListener('click', function() {
+    // Hide the install popup
+    installPopup.style.display = 'none';
+    // Show the install prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then(function(choiceResult) {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+
+  dismissBtn.addEventListener('click', function() {
+    // Hide the install popup
+    installPopup.style.display = 'none';
+  });
+</script>
       <style>
         .icon2{
             margin-top:5px;
