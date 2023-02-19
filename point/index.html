@@ -1,0 +1,199 @@
+<html>
+    <head>
+      <!--メタ情報　及び　外部スクリプト読み込み-->
+      <!--(c) 2022 はるはる-->
+      <meta charset="utf-8" />
+      <title>はるはるPay</title>
+      <script src="//accaii.com/chaatbonharuharu/script.js" async></script><noscript><img src="//accaii.com/chaatbonharuharu/script?guid=on"></noscript>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+      <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/mtaketani113/jquery-barcode@master/jquery-barcode.js"></script> 
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <!--メタ情報　及び　外部スクリプト読み込み of 終わり-->
+    </head>
+    <body>
+    <topbar></topbar>
+      <!--ページ内コンテンツ-->
+      <div id="toppage" class="page">
+       <div class="payment">
+        <div class="ip1"><img src="https://ul.h3z.jp/Z1BAiZ5k.png" class="icon1"></div>
+        <div id="barcode1"></div><br style="clear: both;">
+      </div>
+      <div id="zandaka">
+        
+      </div>
+      <div class="b-menu">
+        <div class="niten"><div id="chargebutton"><div class="material-symbols-rounded">
+            add_task
+        </div><div>チャージする</div>
+    </div>
+        </div>
+        <div class="glbox">
+                <a href="campaign.html">
+                        <span class="material-symbols-rounded icon2">
+                        redeem
+                        </span>
+                </a>             
+                <a href=""> 
+                <span class="material-symbols-rounded icon2">
+                    person
+                </span>
+                </a>
+        </div>
+
+      </div>
+      </div>
+
+      <script>
+        var bid = "111111111111111111";
+        var zandaka = "00";
+        $("#barcode1").barcode(bid,"ean13");
+        $("#zandaka").html("<div class='zbox'>利用可能<div id='rt'><span style='font-size:42px;'>"+Number(zandaka).toLocaleString()+"</span>ポイント</div></div>");
+      </script>
+      <style>
+        .icon2{
+            margin-top:5px;
+            font-size:35pt;
+        }
+a{
+    text-decoration: none;
+    color:#ccc;
+}
+        .zbox{
+            display:flex;
+            width:100%;
+        }
+
+        #rt{
+           margin-left:auto;
+        }
+        .b-menu{
+            position:absolute;
+            top:50%;
+            background-color: #fff;
+            height:50%;
+            width:100%;
+        }
+        .glbox{
+            display: grid;
+            grid-template-columns:70px 70px 70px 70px 70px;
+            grid-template-rows: 70px 70px 70px 70px 50px;
+            height:85%;
+        }
+        .glbox > * {
+  border: 1px solid #ccc;
+  text-align: center;
+  justify-content: center;
+}
+.niten{justify-content: center;
+    text-align: center;
+    display:block;
+    border:none;
+}
+#chargebutton{justify-content: center;
+    display:flex;
+    margin:5%;
+    margin-top:10px;
+    width:85%;
+    background-color:darkturquoise;
+    padding: 10px;
+    border-radius:20px;
+}
+        .ip1{
+            width:80px;
+            padding:5px;
+        }
+        .icon1{
+            width:50px;
+            border-radius: 10px;
+        }
+        .payment{
+            text-align: center;
+            margin-top:18px;
+            background:#fff;
+            opacity: 0.8;
+            padding:20px;
+            display:flex;
+            width:calc(100% - 60px);
+            margin-left:10px;
+            border-radius:0px 0px 10px 10px;
+        }
+        #zandaka{
+            margin-top:18px;
+            padding:0px 0px 20px 20px;
+            width:calc(100% - 60px);
+        }
+  
+        .ii{
+          width:30px;
+        }
+        .css-input {
+          display:inline-block;
+     padding: 5px;
+     font-size: 16px;
+     border-width: 3px;
+     border-color: #171a09;
+     background-color: #FFFFFF;
+     color: #000000;
+     border-style: dotted;
+     border-radius: 4px;
+     box-shadow: 0px 0px 5px rgba(66,66,66,.0);
+     text-shadow: 0px 0px 5px rgba(66,66,66,.0);
+}
+ .css-input:focus {
+     outline:none;
+}
+        body{
+            text-align: center;
+          font-family: "Century Gothic";
+          background-color: azure;
+          overflow: hidden;
+        }
+        .p1{
+          margin-top:10%;
+          text-align:center;
+          width:40%;
+        }
+       #toppage{
+        width:100%;
+        height:calc(100% - 50px);
+       }
+       @media only screen 
+   and (max-height : 800px) {
+    .b-menu{
+            position:absolute;
+            top:35%;
+            background-color: #fff;
+            height:65%;
+            width:100%
+        }
+        .glbox{
+            display: grid;
+            height:85%;
+        }
+   }
+        .page{
+          position:absolute;
+          top:50px;
+          left:0px;
+        }
+        topbar:after{
+          content:"はるはるPOINT";
+        }
+        topbar {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color:gold;
+          opacity: 0.7;
+          padding: 16px 0px 16px 0px;
+          width: calc(100% - 0px);
+          color: #fff;
+        }
+      </style>
+      <!--ページ内コンテンツ of 終わり-->
+    </body>
+  </html>
+  
